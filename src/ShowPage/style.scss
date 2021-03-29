@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+.articleshowdiv {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: 10px auto 10px auto;
+  border-bottom: 1px solid gray;
+  img {
+    display: block;
+    width: 40%;
+    height: auto;
+  }
+  .showdescriptiondiv {
+    width: 50%;
+    h1 {
+      font-size: 50px;
+    }
+    .backbutton {
+      background-color: #5757f8;
+      border-radius: 5px;
+      display: block;
+      color: white;
+    }
+  }
+}
+.changeview {
+  background-color: #5757f8;
+  border-radius: 5px;
+  display: block;
+  color: white;
+  margin: auto;
+}

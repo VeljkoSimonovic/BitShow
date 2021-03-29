@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+.genresdiv {
+  display: flex;
+
+  .genrediv {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(202, 202, 202);
+    color: rgb(0, 0, 0);
+    box-shadow: 0 0 2px black;
+    margin: 2px;
+  }
+}
