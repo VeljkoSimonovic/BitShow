@@ -5,7 +5,7 @@ import { v4 as uuid } from "uuid";
 const Cast = (props) => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("http://api.tvmaze.com/shows/" + props.showId + "/cast")
+    fetch("https://api.tvmaze.com/shows/" + props.showId + "/cast")
       .then((data) => data.json())
       .then((data) => {
         setData(data);

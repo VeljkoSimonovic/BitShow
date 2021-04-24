@@ -9,7 +9,7 @@ const Shows = (props) => {
   const [nameClass] = useState({ bela: "bela", zuta: "zuta" });
 
   useEffect(() => {
-    fetch("http://api.tvmaze.com/shows")
+    fetch("https://api.tvmaze.com/shows")
       .then((data) => data.json())
       .then((data) => {
         setData(data);

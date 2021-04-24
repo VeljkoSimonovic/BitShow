@@ -7,7 +7,7 @@ const ShowPage = (props) => {
   const [data, setData] = useState({ image: {}, genres: [] });
   const [castview, setCastView] = useState(localStorage.getItem("view"));
   useEffect(() => {
-    fetch("http://api.tvmaze.com/shows/" + props.showId)
+    fetch("https://api.tvmaze.com/shows/" + props.showId)
       .then((data) => data.json())
       .then((data) => {
         setData(data);
