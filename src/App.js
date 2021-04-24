@@ -1,6 +1,6 @@
 import "./App.css";
-import React, { useEffect, useState } from "react";
-import uuid from "uuid";
+import React, { useState } from "react";
+
 import Header from "./Header/Header";
 import Shows from "./Shows/Shows";
 import ShowPage from "./ShowPage/ShowPage";

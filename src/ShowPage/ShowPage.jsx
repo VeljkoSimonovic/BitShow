@@ -5,20 +5,23 @@ import Cast from "../Cast/Cast";
 
 const ShowPage = (props) => {
   const [data, setData] = useState({ image: {}, genres: [] });
-  const [castview, setCastview] = useState(localStorage.getItem("view"));
+  const [castview, setCastView] = useState(localStorage.getItem("view"));
   useEffect(() => {
     fetch("http://api.tvmaze.com/shows/" + props.showId)
       .then((data) => data.json())
       .then((data) => {
         setData(data);
       });
-  }, []);
+  }, [props.showId]);
 
   const changeView = () => {
-    if (localStorage.getItem("view") === 1) localStorage.setItem("view", 2);
-    else localStorage.setItem("view", 1);
-    console.log(localStorage.getItem("view"));
-    localStorage.clear();
+    if (parseInt(localStorage.getItem("view")) === 1) {
+      localStorage.setItem("view", 2);
+      setCastView(2);
+    } else {
+      localStorage.setItem("view", 1);
+      setCastView(1);
+    }
   };
 
   return (

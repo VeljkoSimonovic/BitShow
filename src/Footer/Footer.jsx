@@ -1,5 +1,5 @@
 import "./style.scss";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const Footer = (props) => {
   let date = new Date();

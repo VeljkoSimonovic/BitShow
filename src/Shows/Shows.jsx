@@ -6,7 +6,7 @@ import { v4 as uuid } from "uuid";
 const Shows = (props) => {
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
-  const [nameClass, setnameClass] = useState({ bela: "bela", zuta: "zuta" });
+  const [nameClass] = useState({ bela: "bela", zuta: "zuta" });
 
   useEffect(() => {
     fetch("http://api.tvmaze.com/shows")

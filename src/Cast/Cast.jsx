@@ -10,8 +10,8 @@ const Cast = (props) => {
       .then((data) => {
         setData(data);
       });
-  }, []);
-  return props.castview === 1 ? (
+  }, [props.showId]);
+  return parseInt(props.castview) === 2 ? (
     <div className="actorsdiv">
       {data.map((e, i) => {
         if (i < 6) {

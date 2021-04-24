@@ -1,6 +1,5 @@
 import "./style.scss";
-import React, { useEffect, useState } from "react";
-import uuid from "uuid";
+import React from "react";
 
 const Header = (props) => {
   return (
