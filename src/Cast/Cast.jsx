@@ -16,17 +16,9 @@ const Cast = (props) => {
       {data.map((e, i) => {
         if (i < 6) {
           return (
-            <div
-              key={uuid()}
-              className="actordiv"
-              style={{
-                backgroundImage: `url(${e.person.image.medium})`,
-                height: "200px",
-                width: "100%",
-                backgroundRepeat: "no-repeat",
-              }}
-            >
-              {e.person.name}
+            <div key={uuid()} className="actordiv">
+              <img src={e.person.image.medium} alt="" />
+              <p>{e.person.name}</p>
             </div>
           );
         }

@@ -7,7 +7,6 @@ const Search = (props) => {
   const onSearch = (e) => {
     setsearchValue(e.target.value);
     const filtered = props.data.filter((element) => {
-      console.log(element.name, e.target.value);
       return element.name.toLowerCase().includes(e.target.value.toLowerCase());
     });
 
@@ -16,9 +15,9 @@ const Search = (props) => {
   return (
     <input
       type="text"
-      placeholder="Search"
       value={searchValue}
       onChange={onSearch}
+      placeholder="&#x2315; Search among popular shows"
     />
   );
 };

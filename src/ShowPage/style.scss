@@ -1,7 +1,13 @@
 * {
   box-sizing: border-box;
 }
-
+.backbutton {
+  background-color: #ff7300;
+  border-radius: 5px;
+  display: block;
+  color: white;
+  margin: 20px auto 10px auto;
+}
 .articleshowdiv {
   padding: 10px;
   display: flex;
@@ -13,24 +19,54 @@
     display: block;
     width: 40%;
     height: auto;
+    object-fit: contain;
   }
   .showdescriptiondiv {
     width: 50%;
     h1 {
       font-size: 50px;
+      color: #cacaca;
     }
-    .backbutton {
-      background-color: #5757f8;
-      border-radius: 5px;
-      display: block;
-      color: white;
+    h2 {
+      color: #cacaca;
+      margin-top: 30px;
+    }
+    ul {
+      li {
+        color: #cacaca;
+      }
+    }
+    p {
+      color: #cacaca;
+      margin-top: 50px;
     }
   }
 }
 .changeview {
-  background-color: #5757f8;
+  background-color: #ff7300;
   border-radius: 5px;
   display: block;
   color: white;
   margin: auto;
+}
+@media only screen and (max-width: 900px) {
+  .articleshowdiv {
+    .showdescriptiondiv {
+      h1 {
+        font-size: 30px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 650px) {
+  .articleshowdiv {
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 100%;
+    }
+    .showdescriptiondiv {
+      width: 100%;
+    }
+  }
 }

@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import React, { useState } from "react";
 
 import Header from "./Header/Header";
@@ -17,7 +17,7 @@ const App = (props) => {
   };
   return (
     <>
-      <Header />
+      <Header displayShow={displayShow} />
       {page === 1 ? (
         <Shows displayShow={displayShow} />
       ) : (

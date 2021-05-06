@@ -6,7 +6,7 @@ import { v4 as uuid } from "uuid";
 const Shows = (props) => {
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
-  const [nameClass] = useState({ bela: "bela", zuta: "zuta" });
+  const [nameClass] = useState({ white: "white", yellow: "yellow" });
 
   useEffect(() => {
     fetch("https://api.tvmaze.com/shows")
@@ -45,15 +45,16 @@ const Shows = (props) => {
                   key={uuid()}
                 >
                   <img src={show.image.medium} alt="" />
-                  <div className="rating">{show.rating.average}</div>
+
                   <div
                     className={
                       show.rating.average > 8.5
-                        ? nameClass.zuta
-                        : nameClass.bela
+                        ? nameClass.yellow
+                        : nameClass.white
                     }
                   >
                     <h3>{show.name}</h3>
+                    <div className="rating">{show.rating.average}</div>
                   </div>
                 </div>
               );

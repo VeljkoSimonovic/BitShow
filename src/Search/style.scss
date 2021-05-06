@@ -2,8 +2,11 @@
   box-sizing: border-box;
 }
 input {
-  width: 100%;
+  display: block;
+  width: 90%;
   margin: 5px 0 5px 0;
+  margin: 10px auto;
+  height: 32px;
   border: none;
   border-bottom: 1px solid gray;
 }
