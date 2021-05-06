@@ -13,7 +13,7 @@ const ShowPage = (props) => {
       .then((data) => {
         setData(data);
       });
-    fetch("http://api.tvmaze.com/shows/" + props.showId + "/seasons")
+    fetch("https://api.tvmaze.com/shows/" + props.showId + "/seasons")
       .then((data) => data.json())
       .then((data) => setSeasons(data));
   }, [props.showId]);
